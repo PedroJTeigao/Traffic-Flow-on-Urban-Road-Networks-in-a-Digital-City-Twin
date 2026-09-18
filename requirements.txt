@@ -1,0 +1,20 @@
+# Pinned to the versions this repo was tested against (Python 3.12.10, Windows).
+numpy==2.5.0
+matplotlib==3.11.0
+pillow==11.3.0
+networkx==3.6.1
+
+# scipy is optional: ctm/od_matrix.py's build_od_dist() uses scipy.spatial.cKDTree
+# for faster neighbour queries if available, and falls back to a pure-numpy
+# search otherwise (see the try/except in build_od_dist). Not required by any
+# script in scripts/, which all use the time-based OD pipeline (build_od_time).
+scipy==1.18.0
+
+# dtcc-core provides the OSM road graph and DeSO statistics used by every
+# script in scripts/ (dtcc.datasets.roads, dtcc.datasets.deso).
+# The version below (0.9.8.dev0) is a development snapshot built from
+# https://github.com/dtcc-platform/dtcc-core — it may not be the version
+# `pip install dtcc-core` resolves to on PyPI. If PyPI gives you a different
+# API surface, install from source instead:
+#   pip install git+https://github.com/dtcc-platform/dtcc-core.git
+dtcc-core==0.9.8.dev0
