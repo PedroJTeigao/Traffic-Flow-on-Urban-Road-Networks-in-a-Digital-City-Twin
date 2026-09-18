@@ -4,6 +4,11 @@ matplotlib==3.11.0
 pillow==11.3.0
 networkx==3.6.1
 
+# Needed to run the notebooks in pde/ (verification_pde.ipynb,
+# traffic_model_full_en4.ipynb). Not required for anything in ctm/ or scripts/.
+jupyter==1.1.1
+ipython==9.14.1
+
 # scipy is optional: ctm/od_matrix.py's build_od_dist() uses scipy.spatial.cKDTree
 # for faster neighbour queries if available, and falls back to a pure-numpy
 # search otherwise (see the try/except in build_od_dist). Not required by any

@@ -20,8 +20,11 @@ the ECMI Modelling Week 2026, Project 7 group report, "Traffic Flow on a
 Digital City Twin" — see [`repo URL`] and the Code Availability line at the
 bottom of this file.
 
-Part II (the LWR/Godunov PDE continuum model) is being developed separately
-and will be added under [`pde/`](pde/README.md).
+**Part II** (the LWR/Godunov PDE continuum model) lives under
+[`pde/`](pde/README.md) as two Jupyter notebooks: a single-road verification
+against exact analytical solutions, and the full city-scale dynamic
+simulation. See that folder's README for details, a results table, and a
+provenance note.
 
 ---
 
@@ -35,7 +38,7 @@ ecmi-mw2026-traffic/
   .gitignore
   ctm/          # Part I — the CTM engine (formerly "traffic_engine_3")
   scripts/      # runnable experiments (see table below)
-  pde/          # placeholder for Part II
+  pde/          # Part II — LWR/Godunov PDE model (two notebooks; see pde/README.md)
 ```
 
 `ctm/` is the `traffic_engine_3` package with its modules kept intact
@@ -241,6 +244,6 @@ Authors: ECMI Modelling Week 2026, Project 7 group.
 
 ## Code availability
 
-The CTM implementation (Part I) used to produce the traffic-flow results in
-this report is openly available at [repo URL]; the LWR/Godunov PDE model
-(Part II) will be added to the same repository under `pde/`.
+The CTM (Part I) and LWR/Godunov PDE (Part II) implementations used to
+produce the traffic-flow results in this report are openly available at
+[repo URL].
